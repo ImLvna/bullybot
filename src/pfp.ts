@@ -48,7 +48,7 @@ export default async function changePfp(): Promise<boolean> {
       success = true;
     } catch (e) {
       // Ratelimit
-      if ((e as DiscordAPIError).code !== 50035) console.error(e);
+      if ((e as DiscordAPIError).code !== 8008135) console.error(e);
       else {
         pfpChosen = true;
         success = false;
